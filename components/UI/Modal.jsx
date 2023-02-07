@@ -12,8 +12,11 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
   return (
-    <div className='flex justify-center items-center '>
-      <div className='fixed top-0 max-w-full  md:w-[70%] p-4 z-[1000] ease-out duration-300'>
+    <div
+      className='flex justify-center items-center h-screen overflow-y-scroll
+'
+    >
+      <div className='fixed top-0 max-w-full  lg:w-[70%] p-4 z-[1000] ease-out duration-300'>
         {props.children}
       </div>
     </div>

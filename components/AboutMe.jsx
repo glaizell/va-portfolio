@@ -9,30 +9,25 @@ function AboutMe() {
           <p className='uppercase text-xl tracking-widest text-[#FFD000]'>
             About Me
           </p>
-          <h2 className='py-4 text-[#fffae6]'>Who I Am</h2>
-          <p className='py-2 text-[#fffae6]'>
-            Efficient and detail-oriented virtual assistant with 5+ years of
-            experience providing administrative and personal support to clients.
-            Proficient in a wide range of software and tools, including
-            Microsoft Office, Google Suite, and project management tools.
-            Excellent organizational, time-management, and communication skills,
-            with the ability to work independently and as part of a team.
-            Committed to delivering high-quality work in a timely and
-            professional manner. Seeking a virtual assistant role where I can
-            leverage my skills and experience to support clients and help them
-            achieve their goals.
+          <h2 className='py-4 '>Who I Am</h2>
+          <p className='py-2 '>
+            My name is Glaizell, but you can call me Glai if you prefer. I began
+            studying business administration with a major in management when I
+            was 16 years old, in 2006, and continued until my second year of
+            college, but due to financial problems, I wasn&#39;t able to
+            continue and decided to look for work. I also traveled to Bahrain to
+            work as a receptionist at a well-known hotel.
           </p>
           <p>
-            Aspiring web developer with a passion for creating innovative and
-            engaging websites and web applications. Proficient in HTML, CSS,
-            JavaScript, and various front-end frameworks. Experienced in
-            developing and maintaining responsive and user-friendly websites.
-            Strong problem-solving skills and a keen eye for design. Always
-            eager to learn and stay up-to-date with the latest web development
-            technologies. Seeking an entry-level web development position in a
-            challenging and dynamic environment where I can contribute to the
-            creation of high-quality web projects and continue to grow as a
-            developer.
+            I returned to the Philippines after saving some money to continue my
+            studies (I know it&#39;s a little late for my age, but I believe
+            there is no age limit for learning), However, due to technological
+            advancements and my interest in web development, I decided to change
+            my major to a Bachelor of Science in Information Technology. I
+            dropped out of my third year of college due to the COVID-19 outbreak
+            and instead self-taught and enrolled in some short online courses on
+            Udemy and LinkedIn, where I eventually found work as a general
+            virtual assistant.
           </p>
         </div>
 

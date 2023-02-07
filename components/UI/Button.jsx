@@ -1,5 +1,3 @@
-import React from 'react';
-import { useState } from 'react';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 function Button(props) {

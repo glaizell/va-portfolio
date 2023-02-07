@@ -2,10 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaGithub, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
 
-import NavLogo from '../public/assets/navLogo.png';
+import NavLogo from '../../public/assets/navLogo.png';
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -54,6 +53,9 @@ const Header = () => {
             </li>
             <li className=' text-sm uppercase hover:border-b  hover:border-[#FFD000]'>
               <Link href='/#skills'>Skills</Link>
+            </li>
+            <li className=' text-sm uppercase hover:border-b  hover:border-[#FFD000]'>
+              <Link href='/projects'>Projects</Link>
             </li>
             <li className=' text-sm uppercase hover:border-b hover:border-[#FFD000]'>
               <Link href='/resume'>Resume</Link>
@@ -152,24 +154,24 @@ const Header = () => {
                 Let&#39;s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <a
+                <Link
                   href='https://www.linkedin.com/in/glaizell-a-079497147/'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noreferrer noopener'
                 >
                   <div className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'>
                     <FaLinkedinIn />
                   </div>
-                </a>
-                <a
+                </Link>
+                <Link
                   href='https://github.com/glaizell'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noreferrer noopener'
                 >
                   <div className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'>
                     <FaGithub />
                   </div>
-                </a>
+                </Link>
                 <Link href='/#contact'>
                   <div
                     onClick={() => setNav(!nav)}
@@ -178,12 +180,16 @@ const Header = () => {
                     <AiOutlineMail />
                   </div>
                 </Link>
-                <Link href='/resume'>
+                <Link
+                  href='https://t.me/glaizell'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
                   <div
                     onClick={() => setNav(!nav)}
                     className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'
                   >
-                    <BsFillPersonLinesFill />
+                    <FaTelegramPlane />
                   </div>
                 </Link>
               </div>

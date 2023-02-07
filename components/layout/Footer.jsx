@@ -4,6 +4,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaGithub,
+  FaTelegramPlane,
 } from 'react-icons/fa';
 
 function Footer() {
@@ -12,7 +13,7 @@ function Footer() {
       <div className='text-center md:flex justify-between items-center p-8 font-light '>
         <div>
           <p className='text-xs mb-2 md:mb-0'>
-            Authentic | Creative | Aspirational
+            Ambitious | Adaptable | Artistic
           </p>
         </div>
         <div>
@@ -25,7 +26,7 @@ function Footer() {
             <FaFacebook />
           </div>
           <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaInstagram />
+            <FaTelegramPlane />
           </div>
           <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
             <FaTwitter />
