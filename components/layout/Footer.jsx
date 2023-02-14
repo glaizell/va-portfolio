@@ -9,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <div className=''>
+    <div>
       <div className='text-center lg:flex justify-between items-center p-2 font-light '>
         <div className='flex justify-center items-center'>
           <p className='text-xs mb-2 lg:mb-0'>
