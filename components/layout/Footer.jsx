@@ -10,7 +10,7 @@ import {
 function Footer() {
   return (
     <div>
-      <div className='text-center lg:flex justify-between items-center p-2 font-light '>
+      <div className='text-center lg:flex justify-between items-center font-light p-4'>
         <div className='flex justify-center items-center'>
           <p className='text-xs mb-2 lg:mb-0'>
             Ambitious | Adaptable | Artistic

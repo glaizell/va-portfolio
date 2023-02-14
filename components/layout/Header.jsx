@@ -101,7 +101,7 @@ const Header = () => {
           </div>
 
           <div className='py-4 flex flex-col'>
-            <ul className='uppercase mb-4'>
+            <ul className='uppercase mb-8'>
               <Link href='/'>
                 <li onClick={() => setNav(false)} className='side-nav'>
                   Home
@@ -134,7 +134,7 @@ const Header = () => {
               </Link>
             </ul>
             <div>
-              <p className='mb-4 uppercase tracking-widest text-[#FFD000]'>
+              <p className='mb-6 uppercase tracking-widest text-[#FFD000]'>
                 Let&#39;s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
