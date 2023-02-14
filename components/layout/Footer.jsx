@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import {
-  FaInstagram,
   FaFacebook,
   FaTwitter,
   FaLinkedinIn,
@@ -10,33 +10,61 @@ import {
 function Footer() {
   return (
     <div className=''>
-      <div className='text-center md:flex justify-between items-center p-8 font-light '>
+      <div className='text-center lg:flex justify-between items-center p-8 font-light '>
         <div>
-          <p className='text-xs mb-2 md:mb-0'>
-            Ambitious | Adaptable | Artistic
-          </p>
+          <p className='text-xs mb-2 '>Ambitious | Adaptable | Artistic</p>
         </div>
         <div>
-          <p className='text-xs mb-4 md:mb-0'>
+          <p className='text-xs mb-4 '>
             @ GLAIZELL ABBAS. ALL RIGHTS RESERVED, 2023
           </p>
         </div>
         <div className='flex gap-4 text-sm justify-center items-center'>
-          <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaFacebook />
-          </div>
-          <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaTelegramPlane />
-          </div>
-          <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaTwitter />
-          </div>
-          <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaLinkedinIn />
-          </div>
-          <div className='rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300'>
-            <FaGithub />
-          </div>
+          <Link
+            href='https://www.facebook.com/glaizell20'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <div className='footer-icons'>
+              <FaFacebook />
+            </div>
+          </Link>
+          <Link
+            href='https://t.me/glaizell'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <div className='footer-icons'>
+              <FaTelegramPlane />
+            </div>
+          </Link>
+          <Link
+            href='https://twitter.com/_glaizell'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <div className='footer-icons'>
+              <FaTwitter />
+            </div>
+          </Link>
+          <Link
+            href='https://www.linkedin.com/in/glaizell-a-079497147/'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <div className='footer-icons'>
+              <FaLinkedinIn />
+            </div>
+          </Link>
+          <Link
+            href='https://github.com/glaizell'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <div className='footer-icons'>
+              <FaGithub />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

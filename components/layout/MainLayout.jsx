@@ -1,9 +1,9 @@
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 
-function MainLayout({ children }) {
+function MainLayout({ children, className }) {
   return (
-    <div>
+    <div className={className}>
       <Header />
       {children}
       <Footer />

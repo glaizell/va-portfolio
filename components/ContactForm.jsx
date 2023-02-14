@@ -5,6 +5,14 @@ import { sendContactForm } from '../lib/api';
 import Error from './UI/Error';
 import Success from './UI/Success';
 
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: 'font-poppins',
+});
+
 const initValues = { name: '', email: '', topic: '', country: '', message: '' };
 
 function ContactForm(props) {
@@ -43,37 +51,33 @@ function ContactForm(props) {
 
   return (
     <Modal onClose={props.onHideContactForm}>
-      <div>
+      <div className={poppins.className}>
         {error && <Error>{error}</Error>}
         {successMessage && <Success>{successMessage}</Success>}
-        <div className='sm:grid grid-cols-3 w-full h-screen'>
-          <div className='hidden bg-[#0e0e0e] text-white p-4 sm:flex items-center justify-center flex-col'>
-            <p className='mb-4 uppercase text-[#FFD000]'> Let&#39;s Talk</p>
-            <h2 className='text-1xl md:text-4xl mb-4 md:leading-10'>
-              I&#8217;M HERE TO HELP YOU
-            </h2>
+        <div className='relative sm:grid grid-cols-2 w-full overflow-y-scroll max-h-screen'>
+          <FaWindowClose
+            className='absolute top-0 right-1 text-2xl cursor-pointer shadow-sm shadow-gray-500 hover:scale-105 ease-in duration-300 sm:text-black'
+            onClick={props.onHideContactForm}
+          />
+          <div className=' bg-[#0e0e0e] text-white p-4 sm:flex items-center justify-center flex-col'>
+            <p className='mb-4 md:mb-8 text-center uppercase text-[#FFD000]'>
+              Let&#39;s Talk
+            </p>
+            <h1 className='mb-4 md:leading-snug'>I&#8217;M HERE TO HELP YOU</h1>
             <p className='mb-4'>
               You&#8217;re one step closer to making an outstanding brand!
             </p>
           </div>
-          <div className=' relative col-span-2 bg-white text-black p-6'>
-            <FaWindowClose
-              className='absolute top-0 right-1 text-2xl cursor-pointer shadow-md shadow-gray-200 '
-              onClick={props.onHideContactForm}
-            />
-
+          <div className='  bg-white text-black p-6'>
             {/* ------------FORM------------ */}
             <form action='' className='md:mt-1' onSubmit={handleSubmit}>
-              <div className='md:grid grid-cols-2 gap-x-6'>
-                <div className=' md:mb-12'>
-                  <label
-                    className='block md:mb-2 text-gray-400 cursor-pointer font-extralight'
-                    htmlFor='name'
-                  >
+              <div className=''>
+                <div className='mb-8'>
+                  <label className='form-label' htmlFor='name'>
                     Name
                   </label>
                   <input
-                    className='text-sm md:text-base w-full py-2 px-4 mb-8 border-l-0 border-r-0 border-t-0 border-b  outline-none  border-[#141623] md:leading-6 font-medium '
+                    className='form-input-select-textarea'
                     type='text'
                     id='name'
                     name='name'
@@ -83,15 +87,12 @@ function ContactForm(props) {
                   />
                 </div>
 
-                <div className=' md:mb-12'>
-                  <label
-                    className='block md:mb-2 text-gray-400 cursor-pointer font-extralight'
-                    htmlFor='email'
-                  >
+                <div className='mb-8'>
+                  <label className='form-label' htmlFor='email'>
                     Email
                   </label>
                   <input
-                    className='text-sm md:text-base w-full py-2 px-4 mb-8 border-l-0 border-r-0 border-t-0 border-b  outline-none  border-[#141623] md:leading-6 font-medium '
+                    className='form-input-select-textarea'
                     type='email'
                     id='email'
                     name='email'
@@ -100,15 +101,12 @@ function ContactForm(props) {
                     onChange={onChangeHandler}
                   />
                 </div>
-                <div className=' md:mb-12'>
-                  <label
-                    className='block md:mb-2 text-gray-400 cursor-pointer font-extralight'
-                    htmlFor='place'
-                  >
+                <div className='mb-8'>
+                  <label className='form-label' htmlFor='place'>
                     Country / City
                   </label>
                   <input
-                    className='text-sm md:text-base w-full py-2 px-4 mb-8 border-l-0 border-r-0 border-t-0 border-b   outline-none  border-[#141623] md:leading-6 font-medium '
+                    className='form-input-select-textarea'
                     type='text'
                     id='place'
                     name='country'
@@ -117,17 +115,14 @@ function ContactForm(props) {
                     onChange={onChangeHandler}
                   />
                 </div>
-                <div className=' md:mb-12'>
-                  <label
-                    className='block md:mb-3 text-gray-400 cursor-pointer font-extralight'
-                    htmlFor='topic'
-                  >
+                <div className='mb-8'>
+                  <label className='form-label' htmlFor='topic'>
                     How can I help you?
                   </label>
                   <select
                     name='topic'
                     id='topic'
-                    className='text-sm md:text-base w-full py-2 px-4 mb-8 border-l-0 border-r-0 border-t-0 border-b outline-none  border-[#141623] md:leading-6 font-medium'
+                    className='form-input-select-textarea'
                     required
                     value={values.topic}
                     onChange={onChangeHandler}
@@ -146,15 +141,12 @@ function ContactForm(props) {
                   </select>
                 </div>
               </div>
-              <div className=' md:mb-12 w-full'>
-                <label
-                  className='block mb-2 text-gray-400 cursor-pointer font-extralight'
-                  htmlFor='message'
-                >
+              <div className='mb-8 w-full'>
+                <label className='form-label' htmlFor='message'>
                   Your Message Here
                 </label>
                 <textarea
-                  className=' w-full sm:py-2 px-4 md:mb-4 border-l-0 border-r-0 border-t-0 border-b  outline-none border-[#141623] sm:leading-6 font-medium '
+                  className='form-input-select-textarea'
                   name='message'
                   id='message'
                   cols='30'
@@ -164,7 +156,7 @@ function ContactForm(props) {
                   onChange={onChangeHandler}
                 ></textarea>
               </div>
-              <div className='mb4 mt-4'>
+              <div className='mb-8 mt-4'>
                 <button
                   className='border border-[#141623] py-1 px-3 md:py-2 md:px-6 hover:bg-[#ffd000] hover:text-black text-md font-semibold md:text-1xl cursor-pointer hover:scale-110 ease-in duration-300'
                   onClick={onSubmitButton}

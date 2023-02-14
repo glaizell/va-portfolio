@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
-
 import NavLogo from '../../public/assets/navLogo.png';
 
 const Header = () => {
@@ -29,8 +28,8 @@ const Header = () => {
     <div
       className={
         shadow
-          ? 'fixed bg-[#0E0E0E] w-full h-20 border-b z-[100] ease-in-out duration-300 '
-          : 'fixed bg-[#0E0E0E] w-full h-20 z-[100]'
+          ? 'fixed bg-[#0E0E0E] w-full h-20 border-b z-[100] ease-in-out duration-300'
+          : 'fixed bg-[#0E0E0E] w-full h-20 z-[100] '
       }
     >
       <div className='flex justify-between items-center w-full h-full p-8 2xl:px-16'>
@@ -45,23 +44,23 @@ const Header = () => {
         </Link>
         <div>
           <ul className='hidden md:flex gap-10'>
-            <li className='text-sm uppercase hover:border-b hover:border-[#FFD000]'>
+            <li className='main-nav'>
               <Link href='/'>Home</Link>
             </li>
-            <li className=' text-sm uppercase hover:border-b  hover:border-[#FFD000]'>
+            <li className='main-nav'>
               <Link href='/#about'>About</Link>
             </li>
-            <li className=' text-sm uppercase hover:border-b  hover:border-[#FFD000]'>
+            <li className='main-nav'>
               <Link href='/#skills'>Skills</Link>
             </li>
-            <li className=' text-sm uppercase hover:border-b  hover:border-[#FFD000]'>
+            <li className='main-nav'>
               <Link href='/projects'>Projects</Link>
             </li>
-            <li className=' text-sm uppercase hover:border-b hover:border-[#FFD000]'>
+            <li className='main-nav'>
               <Link href='/resume'>Resume</Link>
             </li>
-            <li className=' text-sm uppercase hover:border-b hover:border-[#FFD000]'>
-              <Link href='/#contact'>Contact</Link>
+            <li className='main-nav'>
+              <Link href='/#contact'> Contact</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -70,12 +69,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {/* Overlay */}
       <div
         className={
-          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+          nav
+            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 backdrop-blur'
+            : ''
         }
       >
         {/* Side Drawer Menu */}
@@ -98,59 +98,43 @@ const Header = () => {
                 <AiOutlineClose />
               </div>
             </div>
-
-            <div className='border-b border-gray-300 my-2'>
-              <p className='w-[85%] md:w-[90%] py-2'>
-                Let&#39;s build something legendary together
-              </p>
-            </div>
           </div>
 
           <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
+            <ul className='uppercase mb-4'>
               <Link href='/'>
-                <li
-                  onClick={() => setNav(false)}
-                  className='py-2 text-sm hover:text-[#FFD000]'
-                >
+                <li onClick={() => setNav(false)} className='side-nav'>
                   Home
                 </li>
               </Link>
               <Link href='/#about'>
-                <li
-                  onClick={() => setNav(false)}
-                  className='py-2 text-sm hover:text-[#FFD000]'
-                >
+                <li onClick={() => setNav(false)} className='side-nav'>
                   About
                 </li>
               </Link>
               <Link href='/#skills'>
-                <li
-                  onClick={() => setNav(false)}
-                  className='py-2 text-sm hover:text-[#FFD000]'
-                >
+                <li onClick={() => setNav(false)} className='side-nav'>
                   Skills
                 </li>
               </Link>
+              <Link href='/projects'>
+                <li onClick={() => setNav(false)} className='side-nav'>
+                  Projects
+                </li>
+              </Link>
               <Link href='/resume'>
-                <li
-                  onClick={() => setNav(false)}
-                  className='py-2 text-sm  hover:text-[#FFD000]'
-                >
+                <li onClick={() => setNav(false)} className='side-nav'>
                   Resume
                 </li>
               </Link>
               <Link href='/#contact'>
-                <li
-                  onClick={() => setNav(false)}
-                  className='py-2 text-sm hover:text-[#FFD000]'
-                >
+                <li onClick={() => setNav(false)} className='side-nav'>
                   Contact
                 </li>
               </Link>
             </ul>
-            <div className='py-8'>
-              <p className='uppercase tracking-widest text-[#FFD000]'>
+            <div>
+              <p className='mb-4 uppercase tracking-widest text-[#FFD000]'>
                 Let&#39;s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
@@ -159,7 +143,7 @@ const Header = () => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  <div className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'>
+                  <div className='side-icons'>
                     <FaLinkedinIn />
                   </div>
                 </Link>
@@ -168,15 +152,12 @@ const Header = () => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  <div className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'>
+                  <div className='side-icons'>
                     <FaGithub />
                   </div>
                 </Link>
                 <Link href='/#contact'>
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'
-                  >
+                  <div onClick={() => setNav(!nav)} className='side-icons'>
                     <AiOutlineMail />
                   </div>
                 </Link>
@@ -185,10 +166,7 @@ const Header = () => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black'
-                  >
+                  <div onClick={() => setNav(!nav)} className='side-icons'>
                     <FaTelegramPlane />
                   </div>
                 </Link>

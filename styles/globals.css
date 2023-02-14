@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
 @layer base {
   body {
     @apply bg-[#0E0E0E] text-[#fff] tracking-wide;
-  }
-  html {
-    @apply scroll-smooth;
   }
 
   h1,
@@ -26,8 +27,75 @@
   h2 {
     @apply text-3xl sm:text-4xl;
   }
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+  h4 {
+    @apply text-lg sm:text-xl;
+  }
 
   li {
-    @apply cursor-pointer;
+    @apply text-xs sm:text-sm md:text-base mb-4 leading-normal;
+  }
+  p {
+    @apply text-xs sm:text-sm md:text-base leading-normal;
+  }
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #ffd000;
+    border-radius: 1rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: #0e0e0e;
+  }
+
+  .main-icons {
+    @apply rounded-full shadow-md shadow-gray-500 p-6 cursor-pointer hover:scale-110 ease-in hover:bg-[#FFD000] hover:text-black duration-300;
+  }
+  .main-nav {
+    @apply text-sm uppercase hover:border-b hover:border-[#FFD000];
+  }
+  .side-nav {
+    @apply py-2 text-sm hover:text-[#FFD000];
+  }
+  .side-icons {
+    @apply rounded-full shadow-md shadow-gray-500 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#FFD000] hover:text-black;
+  }
+  .services-svg {
+    @apply text-9xl mx-auto cursor-pointer hover:scale-110 ease-in duration-300;
+  }
+  .services-title {
+    @apply mb-4 text-[#FFD000] text-center;
+  }
+  .services-grid {
+    @apply border rounded-lg p-4;
+  }
+  .form-label {
+    @apply block md:mb-2 text-gray-400 cursor-pointer font-extralight;
+  }
+  .form-input-select-textarea {
+    @apply text-sm md:text-base w-full border-l-0 border-r-0 border-t-0 border-b  outline-none  border-[#141623] md:leading-6 font-medium;
+  }
+  .projects-container {
+    @apply border border-[#FFD000] rounded-lg mb-12 overflow-hidden p-4;
+  }
+  .projects-img {
+    @apply flex justify-center items-center;
+  }
+
+  .projects-btn {
+    @apply inline-block mb-4 cursor-pointer font-medium text-base w-44 text-black  bg-[#ffe366] py-2 px-6 hover:bg-[#ffe880]  hover:scale-105 ease-in duration-300 text-center;
+  }
+
+  .project-details {
+    @apply p-4;
+  }
+
+  .footer-icons {
+    @apply rounded-full shadow-sm shadow-gray-500 p-2 cursor-pointer hover:scale-105 ease-in hover:bg-[#FFD000] hover:text-black  duration-300;
   }
 }
