@@ -8,7 +8,7 @@ import VirtualAssistant from '/public/assets/services/VirtualAssistant.svg';
 
 function MyServices() {
   return (
-    <div id='skills' className='w-full p-4 pt-[120px]'>
+    <div id='skills' className='w-full p-4 pt-[90px]'>
       <div className='max-w-[1240px] m-auto'>
         <div className='mb-12'>
           <p className='mb-6 uppercase text-xl tracking-widest text-[#FFD000]'>

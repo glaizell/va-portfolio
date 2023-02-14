@@ -3,7 +3,7 @@ import selfPhoto from '/public/assets/photo.png';
 
 function AboutMe() {
   return (
-    <div id='about' className='w-full  p-4  py-16 pt-[120px]'>
+    <div id='about' className='w-full  p-4 pt-[90px]'>
       <div className='max-w-[1240px] mx-auto'>
         <div className='mb-8'>
           <p className='mb-6 uppercase text-xl tracking-widest text-[#FFD000]'>
@@ -42,13 +42,7 @@ function AboutMe() {
           </div>
 
           <div className='hidden w-full h-auto m-auto shadow-lg p-2 shadow-gray-500 rounded-xl lg:flex items-center justify-center hover:scale-105 ease-in duration-300'>
-            <Image
-              src={selfPhoto}
-              alt='selfPhoto'
-              width='100%'
-              height='100%'
-              className='rounded-xl'
-            />
+            <Image src={selfPhoto} alt='selfPhoto' className='rounded-xl' />
           </div>
         </div>
       </div>

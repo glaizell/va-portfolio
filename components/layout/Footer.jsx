@@ -10,14 +10,12 @@ import {
 function Footer() {
   return (
     <div className=''>
-      <div className='text-center lg:flex justify-between items-center p-8 font-light '>
-        <div>
-          <p className='text-xs mb-2 '>Ambitious | Adaptable | Artistic</p>
+      <div className='text-center lg:flex justify-between items-center p-2 font-light '>
+        <div className='flex justify-center items-center'>
+          <p className='text-xs'>Ambitious | Adaptable | Artistic</p>
         </div>
-        <div>
-          <p className='text-xs mb-4 '>
-            @ GLAIZELL ABBAS. ALL RIGHTS RESERVED, 2023
-          </p>
+        <div className='flex justify-center items-center'>
+          <p className='text-xs'>@ GLAIZELL ABBAS. ALL RIGHTS RESERVED, 2023</p>
         </div>
         <div className='flex gap-4 text-sm justify-center items-center'>
           <Link
