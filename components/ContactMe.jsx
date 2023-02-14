@@ -4,7 +4,7 @@ function ContactMe(props) {
   return (
     <div
       id='contact'
-      className='max-w-[1240px] h-[85%] w-full mx-auto p-2 py-16 lg:mb-6'
+      className='max-w-[1240px] h-screen w-full mx-auto p-2 flex justify-center items center'
     >
       <div className='max-w-[1240px] m-auto text-center'>
         <p className='uppercase text-xl tracking-widest text-[#FFD000] mb-6 lg:mb-10'>

@@ -3,7 +3,7 @@ import selfPhoto from '/public/assets/photo.png';
 
 function AboutMe() {
   return (
-    <div id='about' className='w-full  p-4 pt-[90px]'>
+    <div id='about' className='w-full p-4 pt-[90px]'>
       <div className='max-w-[1240px] mx-auto'>
         <div className='mb-8'>
           <p className='mb-6 uppercase text-xl tracking-widest text-[#FFD000]'>
@@ -11,8 +11,8 @@ function AboutMe() {
           </p>
           <h2>Who I Am</h2>
         </div>
-        <div className='lg:grid grid-cols-3 gap-8'>
-          <div className='px-12 leading-normal col-span-2'>
+        <div className='lg:grid grid-cols-3 gap-8 max-w-full'>
+          <div className='px-4 leading-normal col-span-2'>
             <p className='mb-8'>
               My name is Glaizell, but you can call me Glai if you prefer. I
               started my educational journey in 2006 studying business
