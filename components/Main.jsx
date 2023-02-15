@@ -23,7 +23,7 @@ function Main() {
           Empowering Efficiency, Anytime Anywhere. A virtual assistant with a
           passion for front-end development.
         </p>
-        <div className='flex items-center justify-between max-w-[330px] m-auto mb-4'>
+        <div className='flex items-center justify-between max-w-[330px] m-auto'>
           <Link
             href='https://www.linkedin.com/in/glaizell-a-079497147/'
             target='_blank'

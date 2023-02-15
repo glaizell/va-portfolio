@@ -33,6 +33,9 @@ html {
   h4 {
     @apply text-lg sm:text-xl;
   }
+  h5 {
+    @apply text-base sm:text-lg;
+  }
 
   li {
     @apply text-xs sm:text-sm md:text-base mb-4 leading-normal;
@@ -52,7 +55,9 @@ html {
   body::-webkit-scrollbar-track {
     background-color: #0e0e0e;
   }
-
+  .container {
+    @apply max-w-[1240px] m-auto w-full p-4 pt-[90px];
+  }
   .main-icons {
     @apply rounded-full shadow-md shadow-gray-500 p-6 cursor-pointer hover:scale-110 ease-in hover:bg-[#FFD000] hover:text-black duration-300;
   }

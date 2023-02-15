@@ -16,26 +16,24 @@ function Resume() {
         <link rel='icon' href='/assets/favicon.svg' />
       </Head>
       <div className='relative mb-8 max-w-[940px] mx-auto p-4 pt-[120px] bg-[#fff1b3] overflow-hidden text-[#191500]'>
-        <div className='absolute top-[-150px] sm:top-[-130px] left-[-220px]  sm:left-[-210px]'>
+        <div className='absolute top-[-160px] sm:top-[-130px] left-[-240px]  sm:left-[-210px]'>
           <Image src={Design1} alt='image design for resume' />
         </div>
         <div className='absolute top-0 right-[-220px] '>
           <Image src={Design2} alt='image design for resume' />
         </div>
-        <div className='absolute  bottom-0  left-[-220px] '>
+        <div className='absolute  bottom-[-80px]  left-[-220px] '>
           <Image src={Design3} alt='image design for resume' />
         </div>
 
-        <div className='absolute bottom-[-180px] right-[-180px]'>
+        <div className='absolute bottom-[-210px] right-[-210px] sm:bottom-[-180px] sm:right-[-180px]'>
           <Image src={Design4} alt='image design for resume' />
         </div>
         <div>
-          <div className='text-center mb-8 bg-[#ffe880] rounded-2xl p-8'>
+          <div className='text-center mb-8 bg-[#ffe880] rounded-2xl p-6'>
             <h1 className='mb-6'>Glaizell Abbas</h1>
-            <div className='mb-8 rounded-2xl p-2 bg-[#4A4E61] max-w-full sm:w-[70%] lg:w-[60%] mx-auto text-sm md:text-base text-white'>
-              <span>General Virtual Assistant</span>
-              <span> | </span>
-              <span>Web Developer</span>
+            <div className='mb-8 rounded-2xl p-2 bg-[#4A4E61] max-w-full w-full sm:w-[60%] md:w-[50%] mx-auto text-sm md:text-base text-white'>
+              <h4>General Virtual Assistant</h4>
             </div>
             <p>
               Efficient and detail-oriented virtual assistant with a passion for
@@ -55,71 +53,77 @@ function Resume() {
           </div>
           <div className='md:grid grid-cols-3 '>
             <div className='md:pt-4'>
-              <div className='mb-8'>
+              <div className='mb-4'>
                 <h4 className='mb-2 text-[#191500]'>Education</h4>
                 <div className='p-4'>
                   <div className='mb-4'>
                     <p className='text-[#4A4E61] mb-2 font-bold'>2017-2020</p>
-                    <p>Bachelor of Science in Information Technology</p>
-                    <p>AMA University</p>
+                    <p className='md:px-0 px-8'>
+                      Bachelor of Science in Information Technology
+                    </p>
+                    <p className='md:px-0 px-8'>AMA University</p>
                   </div>
 
                   <div className='mb-4'>
                     <p className='text-[#4A4E61] mb-2 font-bold'>2006-2008</p>
-                    <p>Business Administration major in Management</p>
-                    <p>Holy Angel University</p>
+                    <p className='md:px-0 px-8'>
+                      Business Administration major in Management
+                    </p>
+                    <p className='md:px-0 px-8'>Holy Angel University</p>
                   </div>
                 </div>
               </div>
 
-              <div>
+              <div className='mb-4'>
                 <h4 className='mb-2 text-[#191500]'>Certification</h4>
                 <div className='p-4'>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Udemy</h5>
-                    <p>
+                    <p className='md:px-0 px-8'>
                       Build Responsive Real-World Websites with HTML and CSS
                     </p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Udemy</h5>
-                    <p>
+                    <p className='md:px-0 px-8'>
                       The Complete JavaScript Course 2022: From Zero to Expert!
                     </p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Udemy</h5>
-                    <p>The Complete 2020 Web Development Bootcamp</p>
+                    <p className='md:px-0 px-8'>
+                      The Complete 2020 Web Development Bootcamp
+                    </p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>LinkedIn</h5>
-                    <p>Effective Listening</p>
+                    <p className='md:px-0 px-8'>Effective Listening</p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>LinkedIn</h5>
-                    <p>Managing Stress</p>
+                    <p className='md:px-0 px-8'>Managing Stress</p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>LinkedIn</h5>
-                    <p>Improving Your Memory</p>
+                    <p className='md:px-0 px-8'>Improving Your Memory</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className='col-span-2 md:bg-[#ffe880] rounded-2xl md:p-6'>
-              <div className='mb-8'>
+              <div className='mb-4'>
                 <h4 className='mb-2 text-[#191500]'>Work Experience</h4>
                 <div className='p-4'>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Online Research</h5>
-                    <p>
+                    <p className='px-8'>
                       searching for potential candidates through online
                       platforms such as LinkedIn.
                     </p>
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Event Promoter</h5>
-                    <p>
+                    <p className='px-8'>
                       gathering information on upcoming events and searching
                       groups on different online platforms to promote the
                       upcoming events.
@@ -130,7 +134,7 @@ function Resume() {
                       Recruitment Researcher / Linkedin recruiter / Company
                       mapping
                     </h5>
-                    <p>
+                    <p className='px-8'>
                       Tracking the companies to which candidates transfer from
                       or to, and the number of candidates involved in each
                       transfer.
@@ -138,7 +142,7 @@ function Resume() {
                   </div>
                   <div className='mb-4'>
                     <h5 className='text-[#4A4E61] mb-2'>Persona mapping</h5>
-                    <p>
+                    <p className='px-8'>
                       Filtering candidates based on client instructions and
                       entering information into Google Slides
                     </p>
@@ -147,8 +151,8 @@ function Resume() {
               </div>
               <div className='mb-4'>
                 <h4 className='mb-2 text-[#191500]'>Skills And Tools</h4>
-                <div className=''>
-                  <ul className='mb-6 leading-6 list-disc px-6'>
+                <div>
+                  <ul className='mb-6 leading-6 list-disc px-12'>
                     <li>Front-End Coding</li>
                     <li>Data Entry</li>
                     <li>Online Research</li>
@@ -162,7 +166,7 @@ function Resume() {
                   <h5 className='mb-2'>
                     Proficient in using the following tools:
                   </h5>
-                  <ul className='leading-6 list-disc px-6'>
+                  <ul className='leading-6 list-disc px-12'>
                     <li>Canva</li>
                     <li>Slack</li>
                     <li>
