@@ -8,15 +8,15 @@ import VirtualAssistant from '/public/assets/services/VirtualAssistant.svg';
 
 function MyServices() {
   return (
-    <div id='skills' className='container'>
-      <div>
+    <div id='skills' className='w-full p-4 pt-[90px]'>
+      <div className='max-w-[1240px] m-auto'>
         <div className='mb-12'>
           <p className='mb-6 uppercase text-xl tracking-widest text-[#FFD000]'>
             Specialized In
           </p>
           <h2>What I Offer</h2>
         </div>
-        <div className='max-w-full m-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-12 p-4'>
+        <div className='max-w-full m-auto grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-y-8 p-4'>
           <div className='services-grid'>
             <div className='flex justify-center items-center'>
               <DataEntry className='services-svg' />

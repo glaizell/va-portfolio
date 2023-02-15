@@ -5,6 +5,7 @@
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
 }
 @layer base {
   body {
@@ -41,7 +42,7 @@ html {
     @apply text-xs sm:text-sm md:text-base mb-4 leading-normal;
   }
   p {
-    @apply text-xs sm:text-sm md:text-base leading-normal;
+    @apply text-xs sm:text-sm md:text-base leading-relaxed;
   }
   body::-webkit-scrollbar {
     width: 0.5rem;

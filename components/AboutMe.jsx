@@ -3,16 +3,16 @@ import selfPhoto from '/public/assets/photo.png';
 
 function AboutMe() {
   return (
-    <div id='about' className='container'>
-      <div>
+    <div id='about' className='w-full p-4 pt-[90px]'>
+      <div className='max-w-[1240px] m-auto'>
         <div className='mb-8'>
           <p className='mb-6 uppercase text-xl tracking-widest text-[#FFD000]'>
             About Me
           </p>
           <h2>Who I Am</h2>
         </div>
-        <div className='lg:grid grid-cols-3 gap-8 max-w-full md:p-12'>
-          <div className='px-4 col-span-2 lg:flex justify-center items-center mt-8 lg:mt-0'>
+        <div className='lg:grid grid-cols-2 max-w-full '>
+          <div className='px-8 lg:flex justify-center items-center md:mb-0 mb-6'>
             <p>
               Hi, my name is Glaizell. As a highly organized and detail-oriented
               virtual assistant, I have extensive experience in data entry,
@@ -28,8 +28,14 @@ function AboutMe() {
             </p>
           </div>
 
-          <div className='hidden w-full h-auto m-auto shadow-lg p-2 shadow-gray-500 rounded-xl lg:flex items-center justify-center hover:scale-105 ease-in duration-300'>
-            <Image src={selfPhoto} alt='selfPhoto' className='rounded-xl' />
+          <div className=' m-auto md:shadow-lg md:shadow-gray-500 p-4 rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300'>
+            <Image
+              src={selfPhoto}
+              alt='selfPhoto'
+              className='rounded-xl'
+              width={300}
+              height={300}
+            />
           </div>
         </div>
       </div>
